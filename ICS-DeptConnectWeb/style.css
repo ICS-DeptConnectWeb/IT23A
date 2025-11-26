@@ -351,8 +351,8 @@ section.events {
   color: #41a317;
 }
 
- /* Sir Partos */
-.faculty-card {
+ /* Faculty Members */
+ .faculty-card {
     border: 2px solid rgba(0, 128, 0, 0.35);
     border-radius: 18px;
     padding: 15px;
@@ -363,8 +363,20 @@ section.events {
     justify-content: center;
     height: 255px;
     width: 387px;
-  
+   transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
+  .faculty-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(46, 125, 50, 0.75);
+    }
+
+.faculty .cards-row {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 40px; /* space between cards */
+  justify-items: center; /* centers the cards */
+}
 
   .faculty-photo {
 
@@ -379,9 +391,7 @@ section.events {
     font-size: 1.25rem;
     line-height: 1.4;
 
-  }
-
-
+  } 
 
 
    
