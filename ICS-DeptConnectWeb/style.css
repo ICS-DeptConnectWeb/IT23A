@@ -19,6 +19,7 @@
       padding: 10px 20px;
       border-bottom: 1px solid #ccc;
       margin-bottom: 0;
+      height: 100px;
     }
 
     header .logo {
@@ -28,11 +29,12 @@
     }
 
     header .logo img {
-      height: 50px;
+      padding-left: 22px;
+      height: 65px;
     }
 
     header .logo div {
-      font-size: 14px;
+      font-size: 22px;
       line-height: 1.2;
       color: #0f660f;
       font-weight: bold;
@@ -41,7 +43,7 @@
     header .logo div span {
       display: block;
       font-weight: normal;
-      font-size: 12px;
+      font-size: 19px;
       color: #3a803a;
     }
 
@@ -116,6 +118,7 @@
     /* Banner Section*/
     /* Carousel Base Styles */
     #home-carousel {
+   
       position: relative;
       width: 100%;
       max-height: 600px;
@@ -277,7 +280,7 @@
       color: #008000;
       text-align: center;
       margin-top: 40px;
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
     }
 
@@ -447,24 +450,85 @@
 
     /* Goals Section */
     .goals-box {
-      border: 1px solid #198754;
-      /* Success color */
+      border:  2px solid #1e9b34;
       border-radius: 1rem;
-      /* Rounded corners */
       padding: 2.5rem;
       background-color: #fafffa;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      box-shadow:0 4px 15px rgba(0, 128, 0, 0.15);
       max-width: 1200px;
       /* Adjusted max-width to closely match user's desired 1198px for large screens */
     }
-
-     
-
-
     .goals-box:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 25px rgba(46, 125, 50, 0.75);
     }
+
+    /* Achievements Section */
+  
+
+.achievements-subtitle {
+  padding: 25px;
+    color: #0a8d23;
+    font-weight: 600;
+    font-size: 23px;
+    
+}
+    .achievement-card {
+    border: 2px solid #1e9b34;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 128, 0, 0.15);
+    overflow: hidden;
+
+}
+
+/* Left vertical image/box */
+.left-box {
+    background-color: #ffffff;
+    border-right: 2px solid #1e9b34;
+    height: 220px; /* adjust as needed */
+    max-width: 1200px;
+}
+
+.achievement-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(46, 125, 50, 0.75);
+    }
+
+/* Text area */
+.achievement-text {
+    padding: 30px 40px;
+}
+
+.achievement-text p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #1e9b34;
+}
+
+.see-more {
+    color: #1e9b34;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.see-more:hover {
+    text-decoration: underline;
+}
+
+.seal-icon-wrapper img {
+      max-height: 70px;
+      width: auto;
+    }
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .left-box {
+        border-right: none;
+        border-bottom: 2px solid #1e9b34;
+        height: 150px;
+    }
+}
+
 
 
 
