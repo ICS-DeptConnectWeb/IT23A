@@ -695,6 +695,7 @@ footer {
     border-bottom: 1px solid #ddd;
 /* Faculty Cards Container */
     }
+
 .faculty-carding{
     display: flex;
     align-items: center;
@@ -743,3 +744,76 @@ footer {
     width: 100%;
     overflow: hidden;
 }
+.footer-logo img {
+    height: 120px; /* choose your preferred height */
+    width: auto;  /* keeps aspect ratio */
+    margin-right: 10px; /* space between the logos */
+    display: inline-block;
+}
+
+/* Remove default spacing */
+footer, footer * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Footer container */
+.faculty-footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* space between main sections */
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+/* Sections */
+.faculty-footer-section {
+  flex: 1 1 200px;
+  line-height: 1.3; /* compact text spacing */
+}
+
+/* Headings */
+.faculty-footer-section h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+}
+
+ul li + li {
+  margin-top: 4px;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* Logos */
+.footer-logo img {
+  height: 90px;
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle; /* removes tiny inline gap */
+}
+
+/* Footer bottom */
+.faculty-footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #444;
+  font-size: 13px;
+  color: #aaa;
+}
+
