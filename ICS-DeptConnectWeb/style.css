@@ -1,5 +1,5 @@
-    * {
-      box-sizing: border-box;
+* {
+      box-sizing: border-sizing;
       margin: 0;
       padding: 0;
     }
@@ -124,7 +124,7 @@
       overflow: hidden;
     }
 
-    .c-img { 
+    .c-img {
       height: 600px;
       object-fit: cover;
     }
@@ -205,11 +205,6 @@
       transform: translateY(-6px);
       box-shadow: 0 12px 25px rgba(46, 125, 50, 0.75);
     }
-.faculty-card img {
-    max-width: 150px;
-    height: auto;
-}
-
 
     .card img {
       width: 100%;
@@ -259,7 +254,7 @@
 
     /* Upcoming Events  */
 
-    section.events {
+    /* section.events {
       padding: 70px 0 50px;
       background-color: #fff;
       max-width: 1140px;
@@ -689,8 +684,7 @@ footer {
         margin-top: 10px;
       }
     }
-
-    /* Faculty Section Styles */
+      /*Faculty Section Styles
 /* Sticky Header */
     .faculty-header {
     position: sticky;
@@ -699,9 +693,9 @@ footer {
     background: white;
     padding: 15px 30px;
     border-bottom: 1px solid #ddd;
-}
 /* Faculty Cards Container */
-.faculty-card {
+    }
+.faculty-carding{
     display: flex;
     align-items: center;
     gap: 25px;
@@ -749,4 +743,3 @@ footer {
     width: 100%;
     overflow: hidden;
 }
-
