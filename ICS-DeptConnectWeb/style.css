@@ -676,3 +676,182 @@ footer {
 
 
 
+
+/* ---------- FACULTY CAROUSEL CARD ---------- */
+.faculty-carding {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* PHOTO */
+.faculty-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #008000;
+}
+
+/* TEXT */
+.faculty-info p {
+    margin: 4px 0;
+    font-size: 16px;
+}
+
+/* FIX CAROUSEL STACKING */
+#facultyCarousel .carousel-item {
+    padding: 30px 0;
+}
+
+/* Only show & center the active/transitioning slide */
+#facultyCarousel .carousel-item.active,
+#facultyCarousel .carousel-item-next,
+#facultyCarousel .carousel-item-prev {
+    display: flex;
+    justify-content: center;
+}
+
+/* BUTTON COLORS */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .faculty-carding {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .faculty-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.faculty-container {
+    max-width: 1300px;
+}
+
+/* CARD */
+.faculty-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    width: 100%;
+}
+
+/* POSITION TEXT */
+.faculty-position {
+    font-size: 18px;
+    font-weight: 600;
+    color: #008000;
+    margin-bottom: 15px;
+}
+
+/* IMAGE */
+.faculty-img {
+    width: 180px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top; /* crop bottom */
+    border-radius: 12px;
+    border: 3px solid #008000;
+    margin-bottom: 12px;
+}
+
+/* NAME */
+.faculty-name {
+    font-size: 18px;
+    margin: 0;
+}
+
+.bold-name {
+    font-weight: 700;
+}
+
+.suffix {
+    font-weight: 600;
+    color: #008000;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+    .faculty-img {
+        width: 160px;
+        height: 180px;
+    }
+}
+/* Entire row per faculty */
+.faculty-row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Faculty Photo */
+.faculty-photo {
+    width: 180px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top; /* crop bottom */
+    border-radius: 12px;
+    border: 3px solid #008000; /* green outline */
+}
+
+/* Right-side white card content */
+.faculty-info-card {
+    flex: 1;
+}
+
+/* Position text */
+.faculty-position {
+    font-size: 20px;
+    font-weight: 600;
+    color: #008000;
+    margin-bottom: 10px;
+}
+
+/* Name text */
+.faculty-name {
+    font-size: 20px;
+    margin: 0;
+}
+
+.bold-name {
+    font-weight: 700;
+}
+
+.suffix {
+    font-weight: 600;
+    color: #008000;
+}
+
+/* Mobile view: stack vertically */
+@media (max-width: 768px) {
+    .faculty-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .faculty-photo {
+        width: 160px;
+        height: 180px;
+    }
+}
