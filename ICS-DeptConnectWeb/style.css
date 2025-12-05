@@ -1,146 +1,223 @@
 * {
-      box-sizing: border-sizing;
-      margin: 0;
-      padding: 0;
-    }
+  box-sizing: border-sizing;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-      color: #333;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
 
-    /* Header section */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      border-bottom: 1px solid #ccc;
-      margin-bottom: 0;
-     
-    }
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
 
-    header .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+/* Header section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0;
+}
 
-    header .logo img {
-      padding-left: 22px;
-      height: 50px;
-    }
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    header .logo div {
-      font-size: 14px;
-      line-height: 1.2;
-      color: #0f660f;
-      font-weight: bold;
-    }
+header .logo img {
+  padding-left: 22px;
+  height: 50px;
+}
 
-    header .logo div span {
-      display: block;
-      font-weight: normal;
-      font-size: 12px;
-      color: #3a803a;
-    }
+header .logo div {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #0f660f;
+  font-weight: bold;
+}
 
-    /* Navbar container */
-    .navbar {
-      display: flex;
-      z-index: 1000px;
-      padding: 0 20px;
-    }
+header .logo div span {
+  display: block;
+  font-weight: normal;
+  font-size: 12px;
+  color: #3a803a;
+}
 
-    /* Navbar links */
-    .navbar a,
-    .dropbtn {
-      color: #008000;
-      padding: 10px 15px;
-      text-decoration: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      font-weight: 500;
-      transition: background-color 0.2s;
-    }
+/* Navbar container */
+.navbar {
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
 
-    .navbar a:hover,
-    .dropdown:hover .dropbtn {
-      background-color: #e6ffe6;
-      color: #005f00;
-    }
+/* Navbar links */
+.navbar a,
+.dropbtn {
+  color: #008000;
+  padding: 10px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
 
-    /* Dropdown container */
-    .dropdown {
-      position: relative;
-    }
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #e6ffe6;
+  color: #005f00;
+}
 
-    /* Dropdown menu */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #ffffff;
-      min-width: 150px;
-      top: 100%;
-      left: 0;
-      z-index: 10;
-      flex-direction: column;
-      border-radius: 5px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
 
-    .dropdown-content a {
-      color: #008000;
-      padding: 10px 15px;
-      text-decoration: none;
-      display: block;
-    }
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 150px;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
-    .dropdown-content a:hover {
-      background-color: #e6ffe6;
-    }
+.dropdown-content a {
+  color: #008000;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
 
-    /* Show dropdown on hover */
-    .dropdown:hover .dropdown-content {
-      display: flex;
-    }
+.dropdown-content a:hover {
+  background-color: #e6ffe6;
+}
 
-    /* Add arrow to dropdown */
-    .dropbtn::after {
-      content: ' ▼';
-      font-size: 0.6em;
-      margin-left: 5px;
-    }
+/* Show dropdown on hover (desktop only) */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Add arrow to dropdown */
+.dropbtn::after {
+  content: ' ▼';
+  font-size: 0.6em;
+  margin-left: 5px;
+}
+
+/* RESPONSIVE PART */
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #008000;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 900px) {
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  /* Make dropdown menus expand on click */
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none; /* disable hover behavior */
+  }
+
+  .dropdown .dropbtn {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Open dropdown when clicking */
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+
+  /* Enable toggle on mobile */
+  .dropbtn {
+    pointer-events: auto;
+  }
+}
+
+/* Small JS to toggle dropdown on mobile */
+@media (max-width: 900px) {
+  .dropbtn {
+    cursor: pointer;
+  }
+
+  .dropbtn::after {
+    content: ' ▼';
+  }
+
+  .dropdown .dropbtn {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
     /* Banner Section*/
     /* Carousel Base Styles */
-    #home-carousel {
-   
-      position: relative;
-      width: 100%;
-      max-height: 600px;
-      overflow: hidden;
-    }
+    #heroCarousel {
+    margin-top: 80px; /* adjust value */
+}
 
-    .c-img {
-      height: 600px;
-      object-fit: cover;
-    }
+    .carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    /* Carousel Controls (Prev/Next Arrows) */
-    .carousel-control-prev,
-    .carousel-control-next {
-      width: 10%;
-      opacity: 0.6;
-      transition: opacity 0.3s ease;
+@media (min-width: 768px) {   /* tablets & up */
+    .carousel-img {
+        height: 450px;
     }
+}
 
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      filter: invert(35%) sepia(81%) saturate(637%) hue-rotate(90deg) brightness(90%) contrast(90%);
+@media (max-width: 767px) {   /* phones */
+    .carousel-img {
+        height: 250px;
     }
+}
 
     /* News/Events Section */
     h1 {
@@ -252,28 +329,7 @@
       text-decoration: underline;
     }
 
-    /* Upcoming Events  */
-
-    /* section.events {
-      padding: 70px 0 50px;
-      background-color: #fff;
-      max-width: 1140px;
-      margin: 0 auto 60px;
-    }
-    section.events h2 {
-      text-align: center;
-      color: #2e7d32;
-      font-weight: 700;
-      font-size: 20px;
-      margin-bottom: 20px;
-      border-bottom: 1.5px solid #2e7d32;
-      width: fit-content;
-      margin-left: auto;
-      margin-right: auto;
-      padding-bottom: 6px;
-      user-select: none;
-    }
-    */
+   
     /* Faculty Section Code*/
     h1 {
       color: #008000;
@@ -297,40 +353,8 @@
       margin: 0 auto 60px;
     }
 
-    /* Ma'am Shiela */
-    .faculty .group-2 {
-      width: 438px;
-      display: flex;
-      justify-content: center;
-      margin: 0 auto;
-    }
-
-    .faculty .group-3 {
-      width: 440px;
-      height: 255px;
-      position: relative;
-    }
-
-    .faculty .frame-4 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 438px;
-      height: 255px;
-      display: flex;
-      background-color: #ffffff1a;
-      border-radius: 15px;
-      overflow: hidden;
-      border: 1px solid;
-      border-color: #088110;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .frame-4:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 25px rgba(46, 125, 50, 0.75);
-    }
-
+   
+/* 
     .faculty .text-wrapper-14 {
       margin-top: 154px;
       width: 104px;
@@ -342,9 +366,9 @@
       font-size: 12px;
       letter-spacing: 0;
       line-height: normal;
-    }
+    } */
 
-    .faculty .rectangle-3 {
+    /* .faculty .rectangle-3 {
       position: absolute;
       top: 12px;
       left: 0;
@@ -375,7 +399,7 @@
       font-family: "Inter-SemiBold", Helvetica;
       font-weight: 600;
       color: #41a317;
-    }
+    } */
 
     /* Faculty Members */
     .faculty-card {
@@ -386,6 +410,7 @@
       box-shadow: 0px 0px 14px rgba(0, 128, 0, 0.15);
       display: flex;
       align-items: center;
+      margin: 0 auto;
       justify-content: center;
       height: 255px;
       width: 387px;
@@ -398,15 +423,28 @@
     }
 
     .faculty .cards-row {
-      display: grid;
-      flex-wrap: wrap;
-      grid-template-columns: repeat(3, 1fr);
-      /* 3 columns */
-      gap: 40px;
-      /* space between cards */
-      justify-items: center;
-      /* centers the cards */
-    }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 40px; /* space between cards */
+  justify-items: center; /* centers the cards */
+}
+
+@media (max-width: 768px) {
+  .faculty .cards-row {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+    gap: 20px;
+  }
+
+  .faculty-card {
+    width: 90%; /* card shrinks to fit screen */
+    height: auto; /* allow height to adjust naturally */
+  }
+
+  .faculty-photo {
+    width: 100%;
+    height: auto;
+  }
+}
 
     .faculty-photo {
 
@@ -420,9 +458,8 @@
       font-weight: 500;
       font-size: 1.25rem;
       line-height: 1.4;
-
     }
-
+   
 
     /* History Section Styles */
     .history-box {
@@ -466,7 +503,7 @@
   
 
 .achievements-subtitle {
-  padding: 25px;
+  padding: 24px;
     color: #0a8d23;
     font-weight: 600;
     font-size: 23px;
@@ -628,7 +665,7 @@ footer {
 .social-icons a:hover {
   text-decoration: underline;
 }
-/* Responsive adjustment */
+/* Responsive adjustment footer */
 @media (max-width: 768px) {
     .left-box {
         border-right: none;
@@ -639,174 +676,3 @@ footer {
 
 
 
-
-
-    /* Mobile adjustments */
-    @media (max-width: 767px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .navbar {
-        margin-top: 10px;
-        padding: 0;
-      }
-
-      .navbar a,
-      .dropbtn {
-        padding: 5px 8px;
-      }
-
-      .c-img {
-        height: 300px;
-      }
-
-      .history-box {
-        padding: 1.5rem;
-      }
-
-      .faculty .rectangle-3 {
-        width: 100%;
-        height: 150px;
-      }
-
-      .faculty .frame-4 {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .faculty-info {
-        padding: 15px;
-      }
-
-      .faculty .text-wrapper-14 {
-        margin-top: 10px;
-      }
-    }
-      /*Faculty Section Styles
-/* Sticky Header */
-    .faculty-header {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background: white;
-    padding: 15px 30px;
-    border-bottom: 1px solid #ddd;
-/* Faculty Cards Container */
-    }
-
-.faculty-carding{
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    padding: 25px;
-    border: 2px solid #4CAF50; /* green border */
-    border-radius: 15px;
-    background: #ffffff;
-    width: 80%;
-    margin: auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-.faculty-photo {
-    width: 220px;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-}
-
-.faculty-info p {
-    margin: 4px 0;
-    font-size: 16px;
-}
-
-.faculty-info strong {
-    color: #2e8b57; /* green text */
-}
-
-/* Optional: center carousel horizontally */
-.carousel-item {
-    display: flex;
-    justify-content: center;
-}
-
-.carousel-item {
-    display: none;
-}
-
-.carousel-item.active {
-    display: block;
-}
-
-.carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-/* Remove default spacing */
-footer, footer * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Footer container */
-.faculty-footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px; 
-  padding: 20px;
-  background-color: #ffffff;
-  color: #000000;
-  font-family: Arial, sans-serif;
-}
-
-/* Sections */
-.faculty-footer-section {
-  flex: 1 1 200px;
-  line-height: 1.3;
-}
-
-/* Headings */
-.faculty-footer-section h3 {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-/* Lists */
-ul {
-  list-style: none;
-}
-
-ul li + li {
-  margin-top: 4px;
-}
-
-/* Links */
-a {
-  text-decoration: none;
-  color: #007029;
-}
-
-a:hover {
-  color: #fff;
-}
-
-/* Logos */
-.faculty-footer-logo img {
-  height: 120px;
-  width: auto;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-/* Footer bottom */
-.faculty-footer-bottom {
-  text-align: center;
-  padding: 10px 0;
-  border-top: 1px solid #444;
-  font-size: 13px;
-  color: #aaa;
-}
