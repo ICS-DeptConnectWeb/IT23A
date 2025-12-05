@@ -207,12 +207,12 @@ header .logo div span {
     object-fit: cover;
 }
 
-@media (min-width: 768px) {   /* tablets & up */
+@media (min-width: 768px) {
     .carousel-img {
-        height: 450px;
+        height: 650px; /* try 550–650px depending on your image ratio */
+        object-fit: cover;
     }
 }
-
 @media (max-width: 767px) {   /* phones */
     .carousel-img {
         height: 250px;
@@ -558,19 +558,16 @@ header .logo div span {
 
     /* Year Level Divisions Section */
     .year-level img {
-      max-width: 160px;
-      margin-bottom: 15px;
-      transition: transform 0.3s ease;
-    }
+  max-width: 160px;
+  margin-bottom: 15px;
+  transition: 0.3s ease;
+  filter: drop-shadow(0 12px 25px rgba(46, 125, 50, 0.75));
+}
 
-    .year-level img:hover {
-      transform: scale(1.08);
-    }
-
-    .year-level p {
-      font-weight: 600;
-      color: #1b5e20;
-    }
+.year-level img:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 18px rgba(46, 125, 50, 0.9));
+}
 
 
     /* ---------- FOOTER SECTION ---------- */
