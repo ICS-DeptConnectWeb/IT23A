@@ -113,7 +113,52 @@
       font-size: 0.6em;
       margin-left: 5px;
     }
+    /* Desktop header layout */
+.faculty-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
 
+/* Hide hamburger on desktop */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #008000;
+}
+
+/* Mobile behavior */
+@media (max-width: 768px) {
+
+    /* Show hamburger on mobile */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide navbar by default on mobile */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        background: white;
+        border-top: 2px solid #008000;
+    }
+
+    /* When opened */
+    .navbar.nav-open {
+        display: flex;
+    }
+
+    /* Make dropdowns not float */
+    .dropdown-content {
+        position: static;
+    }
+}
     /* Banner Section*/
     /* Carousel Base Styles */
     #home-carousel {
