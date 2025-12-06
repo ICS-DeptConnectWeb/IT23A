@@ -403,7 +403,7 @@ header .logo div span {
 
     /* Faculty Members */
     .faculty-card {
-      border: 1px solid #088110;
+      border: 2px solid #1e9b34;
       border-radius: 18px;
       padding: 15px;
       background: #fff;
@@ -463,7 +463,7 @@ header .logo div span {
 
     /* History Section Styles */
     .history-box {
-      border: 1px solid #198754;
+      border: 2px solid #1e9b34;
       /* Success color */
       border-radius: 1rem;
       /* Rounded corners */
@@ -568,10 +568,17 @@ header .logo div span {
   transform: scale(1.08);
   filter: drop-shadow(0 0 18px rgba(46, 125, 50, 0.9));
 }
-
+.year-level p {
+      font-weight: 600;
+      color: #1b5e20;
+    }
 
     /* ---------- FOOTER SECTION ---------- */
-footer {
+
+
+
+
+ footer {
   background-color: #fff;
   border-top: 2px solid #008000;
   margin-top: 50px;
@@ -608,6 +615,7 @@ footer {
 .footer-section h3 {
   border-bottom: 1px solid #008000;
   display: inline-block;
+  font-weight: bold;
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
@@ -661,7 +669,7 @@ footer {
 
 .social-icons a:hover {
   text-decoration: underline;
-}
+} 
 /* Responsive adjustment footer */
 @media (max-width: 768px) {
     .left-box {
@@ -673,3 +681,80 @@ footer {
 
 
 
+
+
+
+
+
+
+/* ---------- ICS FACULTY PAGE ---------- */
+
+.ics-faculty-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* ROW / CARD WRAPPER */
+.ics-faculty-row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.ics-faculty-row:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* PHOTO */
+.ics-faculty-photo {
+    width: 180px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 12px;
+    border: 3px solid #008000;
+}
+
+/* TEXT SECTION */
+.ics-faculty-info {
+    flex: 1;
+}
+
+/* NAME */
+.ics-faculty-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.ics-faculty-suffix {
+    font-weight: 600;
+    color: #008000;
+}
+
+/* LABEL TEXT */
+.ics-faculty-info p {
+    margin: 4px 0;
+    font-size: 16px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .ics-faculty-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ics-faculty-photo {
+        width: 160px;
+        height: 180px;
+    }
+}
