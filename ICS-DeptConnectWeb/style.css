@@ -403,7 +403,7 @@ header .logo div span {
 
     /* Faculty Members */
     .faculty-card {
-      border: 1px solid #088110;
+      border: 2px solid #1e9b34;
       border-radius: 18px;
       padding: 15px;
       background: #fff;
@@ -463,7 +463,7 @@ header .logo div span {
 
     /* History Section Styles */
     .history-box {
-      border: 1px solid #198754;
+      border: 2px solid #1e9b34;
       /* Success color */
       border-radius: 1rem;
       /* Rounded corners */
@@ -568,10 +568,17 @@ header .logo div span {
   transform: scale(1.08);
   filter: drop-shadow(0 0 18px rgba(46, 125, 50, 0.9));
 }
-
+.year-level p {
+      font-weight: 600;
+      color: #1b5e20;
+    }
 
     /* ---------- FOOTER SECTION ---------- */
-footer {
+
+
+
+
+ footer {
   background-color: #fff;
   border-top: 2px solid #008000;
   margin-top: 50px;
@@ -608,6 +615,7 @@ footer {
 .footer-section h3 {
   border-bottom: 1px solid #008000;
   display: inline-block;
+  font-weight: bold;
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
@@ -661,7 +669,7 @@ footer {
 
 .social-icons a:hover {
   text-decoration: underline;
-}
+} 
 /* Responsive adjustment footer */
 @media (max-width: 768px) {
     .left-box {
