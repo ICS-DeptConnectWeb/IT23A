@@ -6,28 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>ICS-DeptConnect</title>
+    <title>ICS-DeptConnect)</title>
     <style>
         /* BASE STYLES */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding-top: 80px; /* Space for fixed header */
+            padding-top: 80px;
+            /* Space for fixed header */
             background-color: #f7f7f7;
+            /* Light grey background for contrast */
         }
+
         .main-content-wrapper {
-            width: 90%; /* Increased width for better mobile use */
+            width: 90%;
             max-width: 1100px;
             margin: 0 auto;
             padding-top: 20px;
         }
 
-        /* HEADER & NAVIGATION STYLES (UPDATED FOR RESPONSIVENESS) */
+        /* HEADER & NAVIGATION STYLES */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px; /* Smaller padding */
+            padding: 10px 20px;
             background: white;
             border-bottom: 2px solid #21c244;
             position: fixed;
@@ -35,19 +38,23 @@
             width: 100%;
             z-index: 1000;
         }
+
         .logo {
             display: flex;
             align-items: center;
         }
+
         .logo img {
-            height: 40px; /* Smaller logo on mobile */
+            height: 40px;
             margin-right: 10px;
         }
+
         .logo div {
             font-weight: bold;
             color: #006400;
             font-size: 1em;
         }
+
         .logo span {
             display: block;
             font-size: 0.7em;
@@ -59,6 +66,7 @@
         .navbar-links {
             display: flex;
         }
+
         .navbar-links a {
             margin-left: 20px;
             text-decoration: none;
@@ -76,11 +84,11 @@
             color: #006400;
         }
 
-        /* Mobile Menu (Hidden by default) */
+        /* Mobile Menu */
         .mobile-menu {
             display: none;
             position: absolute;
-            top: 60px; /* Below the header */
+            top: 60px;
             left: 0;
             width: 100%;
             background-color: white;
@@ -89,6 +97,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             z-index: 999;
         }
+
         .mobile-menu a {
             display: block;
             padding: 10px 20px;
@@ -97,51 +106,71 @@
             border-bottom: 1px solid #eee;
         }
 
-        /* CONTENT CARD STYLES */
+       
         .content-card {
             background: #ffffff;
             margin: 20px 0;
             padding: 20px;
             border-radius: 8px;
-            border-left: 5px solid #21c244;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Lighter shadow */
+            /* Rounded Corners */
+            border: 1px solid #a5d6a7;
+            /* Thin Light Green Border */
+            box-shadow: 0 0 5px rgba(0, 100, 0, 0.2);
+            /* Subtle Green Shadow */
+            
+            
+            color: #006400; 
+            font-size: 1.1em;
         }
+
+        .content-card p, .content-card li {
+            color: #006400;
+        }
+
         .card-header-green {
             color: #006400;
             font-size: 1.4em;
             margin-bottom: 10px;
             font-weight: bold;
         }
+
+        /* Special style for the Alumni card */
         .alumni-insight-card {
             background: #e9f5e9;
-            border-left: 5px solid #006400;
+            /* Keep light green background */
+            border: 1px solid #006400;
+            /* Darker green border for contrast */
             padding: 20px;
             margin: 20px 0;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 5px rgba(0, 100, 0, 0.3);
             font-style: italic;
+            color: #006400;
         }
 
-        /* FOOTER STYLES (UPDATED FOR RESPONSIVENESS) */
+        /* FOOTER STYLES */
         footer {
             margin-top: 50px;
             background: #006400;
             color: white;
             padding: 20px 0;
         }
+
         .footer-container {
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap; /* Allows sections to wrap */
+            flex-wrap: wrap;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
         .footer-section {
             margin: 10px 0;
             flex-grow: 1;
-            min-width: 180px; /* Minimum width before wrapping */
+            min-width: 180px;
         }
+
         .footer-bottom {
             text-align: center;
             padding-top: 10px;
@@ -150,10 +179,12 @@
             font-size: 0.8em;
             padding-bottom: 5px;
         }
+
         .footer-logo img {
             height: 35px;
             margin-right: 10px;
         }
+
         .footer-section a,
         .footer-section p {
             color: white;
@@ -162,6 +193,7 @@
             margin: 3px 0;
             font-size: 0.9em;
         }
+
         .footer-section h3 {
             color: #21c244;
             font-size: 1.1em;
@@ -171,36 +203,41 @@
 
         /* MEDIA QUERIES (FOR PHONES AND SMALL SCREENS) */
         @media (max-width: 768px) {
-            
+
             /* Navigation Bar */
             .navbar-links {
-                display: none; /* Hide desktop links */
+                display: none;
             }
+
             .hamburger {
-                display: block; /* Show hamburger icon */
+                display: block;
             }
 
             /* Footer */
             .footer-container {
-                flex-direction: column; /* Stack footer sections vertically */
+                flex-direction: column;
                 align-items: flex-start;
                 padding: 0 30px;
             }
+
             .footer-section {
                 min-width: 100%;
                 margin: 15px 0;
             }
-            
+
             /* Main Layout */
             body {
-                padding-top: 60px; /* Adjust top padding */
+                padding-top: 60px;
             }
+
             .main-content-wrapper {
-                width: 95%; /* Use more width on small screens */
+                width: 95%;
             }
+
             h1 {
                 font-size: 1.8em !important;
             }
+
             .card-header-green {
                 font-size: 1.2em;
             }
@@ -245,7 +282,7 @@
 
         <h1 style="text-align: center; color: #006400; font-size: 2.2em; margin-top: 30px;">YOUR FUTURE STARTS HERE</h1>
 
-        <p class="intro-text">
+        <p class="intro-text" style="text-align: center; color: black; font-size: 1.1em;">
             The Institute for Computer Studies prepares students to become globally competitive IT professionals.
             Through hands-on learning, innovative research, and real-world experiences, our graduates are ready to take on
             diverse roles in the rapidly growing tech industry.
@@ -255,7 +292,8 @@
             <h2 class="card-header-green">Career Opportunities</h2>
             <p>
                 As technology continues to evolve, so do the opportunities for our graduates. Whether in software
-                development, data analytics, cybersecurity, or creative design, our alumni make a lasting impact in the
+                development, data analytics, cybersecurity, or creative design, our alumni make a lasting
+                impact in the
                 digital world.
             </p>
         </div>
@@ -263,13 +301,14 @@
         <div class="content-card">
             <h2 class="card-header-green">Industries That Welcome Our Graduates</h2>
             <p>
-                Our graduates are employed across multiple sectors — from startups to multinational corporations — contributing
+                Our graduates are employed across multiple sectors — from startups to multinational corporations —
+                contributing
                 technical and leadership skills to drive innovation and progress.
             </p>
             <p>
                 Common Industries:
             </p>
-            <ul class="common-industries">
+            <ul>
                 <li>Information Technology and Software Development</li>
                 <li>Banking and other Financial Institutions</li>
                 <li>Education and Research Institutions</li>
@@ -283,7 +322,8 @@
         <div class="content-card">
             <h2 class="card-header-green">Further Growth and Certifications</h2>
             <p>
-                Learning doesn't stop after graduation. Many of our graduates pursue additional certifications and training to
+                Learning doesn't stop after graduation. Many of our graduates pursue additional certifications and
+                training to
                 further their expertise and career options.
             </p>
             <p>
@@ -326,7 +366,8 @@
             </p>
         </div>
 
-        <div class="final-call-to-action" style="text-align: center; margin-top: 40px; padding: 20px; color: #006400; font-weight: bold;">
+        <div class="final-call-to-action"
+            style="text-align: center; margin-top: 40px; padding: 20px; color: #006400; font-weight: bold;">
             <h3>At the Institute for Computer Studies, we don't just teach technology — we shape futures.</h3>
             <h3>Your journey begins here, and your success story starts now.</h3>
         </div>
@@ -385,7 +426,7 @@
                 mobileMenu.style.display = 'block';
             }
         });
-        
+
         // Hide the menu if the screen resizes to desktop size
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
@@ -394,4 +435,5 @@
         });
     </script>
 </body>
+
 </html>
