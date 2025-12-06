@@ -4,63 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICS Faculty and Staff</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-          rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
+    <title>ICS-DeptConnect</title>
 </head>
 
 <body>
+<!-- Header Section Code -->
 
-    <!-- HEADER SECTION -->
-    <header class="faculty-header">
+    <header class="navbar-dark bg-white fixed-top">
 
-        <div class="logo">
-            <img src="ICS-DeptConnectWeb/assets/ics-logo.png" alt="Logo" />
-            <div>
-                Institute for Computer Studies
-                <span>Northern Bukidnon State College</span>
+    <div class="logo">
+        <img src="ICS-DeptConnectWeb/assets/ics-logo.png" alt="Logo" />
+        <div>
+            Institute for Computer Studies
+            <span> Northern Bukidnon State College</span>
+        </div>
+    </div>
+
+    <!-- Hamburger Button -->
+    <div class="hamburger" id="hamburger">
+        ☰
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <a href="#contact">Home</a>
+
+        <div class="dropdown">
+            <a class="dropbtn">Updates</a>
+            <div class="dropdown-content">
+                <a href="#students">Students</a>
             </div>
         </div>
 
-
-
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-
-            <div class="dropdown">
-                <a class="dropbtn">Updates</a>
-                <div class="dropdown-content">
-                    <a href="#students">Students</a>
-
-                </div>
+        <div class="dropdown">
+            <a class="dropbtn">Community</a>
+            <div class="dropdown-content">
+                <a href="#students">Students</a>
+                <a href="#alumniSpotlight">Alumni</a>
+                <a href="#courseOffered">Courses Offered</a>
+                <a href="faculty.html">Faculty</a>
             </div>
+        </div>
 
+        <a href="#contact">Contact</a>
 
-            <div class="dropdown">
-                <a class="dropbtn">Community</a>
-                <div class="dropdown-content">
-                    <a href="#students">Students</a>
-                    <a href="#alumniSpotlight">Alumni</a>
-                    <a href="#courseOffered">Courses Offered</a>
-                    <a href="faculty.html">Faculty</a>
-                </div>
+        <div class="dropdown">
+            <a class="dropbtn">About</a>
+            <div class="dropdown-content">
+                <a href="#aboutUs">About Us</a>
+                <a href="#faq">FAQS</a>
             </div>
+        </div>
+    </nav>
 
-            <a href="#contact">Contact</a>
-
-            <div class="dropdown">
-                <a class="dropbtn">About</a>
-                <div class="dropdown-content">
-                    <a href="#aboutUs">About Us</a>
-                    <a href="#faq">FAQS</a>
-
-                </div>
-            </div>
-        </nav>
-    </header>
+</header>
 
 
 <div class="container" style="padding-top: 100px;"> 
