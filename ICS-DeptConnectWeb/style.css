@@ -232,7 +232,7 @@ header .logo div span {
       width: 80%;
       height: 2px;
       background-color: #008000;
-      margin: 10px auto 70px;
+      margin: 10px auto 40px;
     }
 
     section.news {
@@ -343,7 +343,7 @@ header .logo div span {
       width: 80%;
       height: 2px;
       background-color: #008000;
-      margin: 10px auto 70px;
+      margin: 10px auto 40px;
     }
 
     section.faculty {
@@ -402,6 +402,14 @@ header .logo div span {
     } */
 
     /* Faculty Members */
+    .link-title {
+    color: #1b5e20;
+    text-decoration: none;
+}
+
+.link-title:hover {
+    color: #1e9b34;
+}
     .faculty-card {
       border: 2px solid #1e9b34;
       border-radius: 18px;
