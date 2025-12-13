@@ -1,0 +1,215 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+ h1 {
+      color: #008000;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 30px;
+      font-weight: bold;
+}
+
+.divider {
+    width: 80%;
+    height: 2px;
+    background-color: #008000;
+    margin: 10px auto 40px;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .logo div {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #0f660f;
+    font-weight: bold;
+}
+
+header .logo div span {
+    display: block;
+    font-weight: normal;
+    font-size: 12px;
+    color: #3a803a;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #3a803a;
+    font-size: 14px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- YEAR LEVEL ROW ---------- */
+.year-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px; /* spacing between logos */
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.year-level {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.year-level img {
+    height: 180px;   /* all logos same height */
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.year-level img:hover {
+    transform: scale(1.08);
+}
+
+.year-level p {
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #0f801f;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background-color: #fff;
+    border-top: 2px solid #008000;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 30px 50px;
+    color: #008000;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    width: 60px;
+    height: auto;
+}
+
+.footer-section h3 {
+    border-bottom: 1px solid #008000;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #008000;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-bottom {
+    background-color: #008000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #008000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .year-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
