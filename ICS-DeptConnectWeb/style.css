@@ -476,7 +476,7 @@ header .logo div span {
       border-radius: 1rem;
       /* Rounded corners */
       padding: 2.5rem;
-      background-color: #fafffa;
+      background-color: #ffffff;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       max-width: 1200px;
       /* Adjusted max-width to closely match user's desired 1198px for large screens */
@@ -497,7 +497,7 @@ header .logo div span {
       border:  2px solid #1e9b34;
       border-radius: 1rem;
       padding: 2.5rem;
-      background-color: #fafffa;
+      background-color: #ffffff;
       box-shadow:0 4px 15px rgba(0, 128, 0, 0.15);
       max-width: 1200px;
       /* Adjusted max-width to closely match user's desired 1198px for large screens */
