@@ -5,29 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ICS Year Level Divisions</title>
   <link rel="stylesheet" href="yearLevelDivision.css">
+ 
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+ 
 </head>
 
 <body>
   <!-- Header Section Code -->
-  <header>
+   <header class="navbar-dark bg-white fixed-top">
+
     <div class="logo">
-      <img src="Assets/ICS-Logo.png" alt="ICS Logo" />
-      <div>
-        Institute for Computer Studies
-        <span> Northern Bukidnon State College</span>
-      </div>
+        <img src="assets/ICS-logo.png" alt="Logo" />
+        <div>
+            Institute for Computer Studies
+            <span> Northern Bukidnon State College</span>
+        </div>
     </div>
 
-    <nav class="navbar">
-      <a href="#about">About</a>
-      <a href="#faculty">Faculty</a>
-      <a href="#updates">Updates</a>
-      <a href="#community">Community</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <!-- Hamburger Button -->
+    <div class="hamburger" id="hamburger">
+        ☰
+    </div>
 
+    <nav class="navbar" id="navbar">
+        <a href="#contact">Home</a>
+
+        <div class="dropdown">
+            <a class="dropbtn">Updates</a>
+            <div class="dropdown-content">
+                <a href="#students">Students</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a class="dropbtn">Community</a>
+            <div class="dropdown-content">
+                <a href="#students">Students</a>
+                <a href="#alumniSpotlight">Alumni</a>
+                <a href="#courseOffered">Courses Offered</a>
+                <a href="faculty.html">Faculty</a>
+            </div>
+        </div>
+
+        <a href="#contact">Contact</a>
+
+        <div class="dropdown">
+            <a class="dropbtn">About</a>
+            <div class="dropdown-content">
+                <a href="#aboutUs">About Us</a>
+                <a href="#faq">FAQS</a>
+            </div>
+        </div>
+    </nav>
+
+</header>
 <h1>ICS YEAR LEVEL DIVISIONS</h1>
   <div class="divider"></div>
 
@@ -99,5 +131,6 @@
       © 2025 Institute for Computer Studies — All Rights Reserved
     </div>
   </footer>
+   <script src="script.js"></script>
 </body>
 </html>
