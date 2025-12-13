@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* ================= HEADER ================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px; /* more breathing room */
+    border-bottom: 1px solid #ccc;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* MORE SPACE between logo & text */
+}
+
+header .logo img {
+    height: 45px; /* slightly smaller */
+}
+
+header .logo div {
+    font-size: 15px; /* slightly bigger */
+    line-height: 1.4; /* better spacing */
+    color: #0f660f;
+    font-weight: bold;
+}
+
+header .logo div span {
+    display: block;
+    font-weight: normal;
+    font-size: 13px;
+    color: #3a803a;
+    margin-top: 2px;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #008000;
+    font-size: 14px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ================= MAIN CONTENT ================= */
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+/* ===== TITLES ===== */
+.main-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #008000;
+}
+
+.year-title {
+    text-align: center;
+    color: #008000;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+/* ===== DIVIDERS ===== */
+.divider-title {
+    width: 100%;
+    margin: 15px auto 40px;
+    border-top: 2px solid #008000;
+}
+
+.divider-year {
+    width: 40%;
+    margin: 10px auto 30px;
+    border-top: 1.5px solid #008000;
+}
+
+/* ===== CARD ===== */
+.card {
+    display: flex;
+    gap: 28px; /* MORE space between image & text */
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 1.5px solid #008000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    align-items: center;
+}
+
+.seal-img {
+    width: 140px; /* slightly smaller */
+    height: auto;
+}
+
+.text-box {
+    flex: 1;
+}
+
+.text-box p {
+    line-height: 1.7; /* better readability */
+    text-align: justify;
+    color: #008000;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 900px) {
+    nav a {
+        margin-left: 15px;
+        font-size: 13px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    header .logo {
+        gap: 12px;
+    }
+
+    header .logo img {
+        height: 40px;
+    }
+
+    .card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .seal-img {
+        width: 60%;
+        max-width: 200px;
+        margin: auto;
+    }
+
+    .text-box p {
+        text-align: center;
+    }
+
+    .main-title {
+        font-size: 26px;
+    }
+
+    .year-title {
+        font-size: 22px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+    header .logo img {
+        height: 35px;
+    }
+
+    header .logo div {
+        font-size: 14px;
+    }
+
+    .seal-img {
+        width: 70%;
+    }
+
+    nav a {
+        font-size: 12px;
+        margin: 5px;
+    }
+
+    .main-title {
+        font-size: 24px;
+    }
+
+    .year-title {
+        font-size: 20px;
+    }
+}
