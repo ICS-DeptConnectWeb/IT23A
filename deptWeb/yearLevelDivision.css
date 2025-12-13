@@ -21,50 +21,183 @@ body {
 
 /* ---------- HEADER ---------- */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0;
 }
 
 header .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 header .logo img {
-    height: 50px;
+  padding-left: 22px;
+  height: 50px;
 }
 
 header .logo div {
-    font-size: 14px;
-    line-height: 1.2;
-    color: #0f660f;
-    font-weight: bold;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #0f660f;
+  font-weight: bold;
 }
 
 header .logo div span {
+  display: block;
+  font-weight: normal;
+  font-size: 12px;
+  color: #3a803a;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+/* Navbar links */
+.navbar a,
+.dropbtn {
+  color: #008000;
+  padding: 10px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #e6ffe6;
+  color: #005f00;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 150px;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-content a {
+  color: #008000;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #e6ffe6;
+}
+
+/* Show dropdown on hover (desktop only) */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Add arrow to dropdown */
+.dropbtn::after {
+  content: ' ▼';
+  font-size: 0.6em;
+  margin-left: 5px;
+}
+
+/* RESPONSIVE PART */
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #008000;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 900px) {
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
     display: block;
-    font-weight: normal;
-    font-size: 12px;
-    color: #3a803a;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  /* Make dropdown menus expand on click */
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none; /* disable hover behavior */
+  }
+
+  .dropdown .dropbtn {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Open dropdown when clicking */
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+
+  /* Enable toggle on mobile */
+  .dropbtn {
+    pointer-events: auto;
+  }
 }
 
-nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    font-weight: 500;
-    color: #3a803a;
-    font-size: 14px;
-}
+/* Small JS to toggle dropdown on mobile */
+@media (max-width: 900px) {
+  .dropbtn {
+    cursor: pointer;
+  }
 
-nav a:hover {
-    text-decoration: underline;
-}
+  .dropbtn::after {
+    content: ' ▼';
+  }
 
+  .dropdown .dropbtn {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 /* ---------- YEAR LEVEL ROW ---------- */
 .year-row {
     display: flex;
